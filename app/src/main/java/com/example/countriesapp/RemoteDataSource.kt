@@ -6,6 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 
+
 interface RestCountriesApi {
     @GET("name/{name}")
     suspend fun getCountryByName(@Path("name") country: String): List<Country>
@@ -17,3 +18,4 @@ var retrofit = Retrofit.Builder()
     .build()
 
 var restCountriesApi = retrofit.create(RestCountriesApi::class.java)
+

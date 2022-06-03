@@ -1,13 +1,14 @@
 package com.example.countriesapp
 
 data class Country (
-    val name: String,
-    val capital: String,
+    val name: Name,
+    val capital: List<String>,
     val population: Long,
     val area: Long,
-    val languages: List<Languages>
+    val languages: Any,
+    val timezones: List<String>,
+    val flags: Flag
 )
 
-data class Languages (
-    val name: String
-        )
+data class Name (val common: String)
+data class Flag(val png: String)
