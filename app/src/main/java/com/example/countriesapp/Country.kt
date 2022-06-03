@@ -1,4 +1,13 @@
 package com.example.countriesapp
 
-class Country {
-}
+data class Country (
+    val name: String,
+    val capital: String,
+    val population: Long,
+    val area: Long,
+    val languages: List<Languages>
+)
+
+data class Languages (
+    val name: String
+        )
